@@ -7,7 +7,7 @@ public class PruebaFibonacci {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        FibonacciSeries Fibonacci = new FibonacciSeries();
+        FibonacciSeries fibo = new FibonacciSeries();
 
         boolean estado = false;
 
@@ -17,7 +17,7 @@ public class PruebaFibonacci {
 
                 System.out.println();
                 System.out.println("Ingrese la opcion que desee: ");
-                System.out.println("1. Para continuar con el programa");
+                System.out.println("1. Generar serie Fibonacci");
                 System.out.println("2. Salir");
                 System.out.print("Su opcion es:");
                 int opcion = sc.nextInt();
@@ -25,25 +25,13 @@ public class PruebaFibonacci {
                 switch (opcion) {
                     case 1:
 
-                        System.out.println("");
-                        System.out.print("Ingrese la posicion hasta donde desea ver la serie Fibonacci: ");
-                        int posicionFibonacci = sc.nextInt();
-
-                        System.out.println("La serie Fibonacci hasta la posicion " + posicionFibonacci + " es:");
-
-                        for (int i = 0; i < posicionFibonacci; i++) {
-
-                            if (posicionFibonacci <= 26) {
-
-                                System.out.print(Fibonacci.GenerarFibonacci(i) + "   ");
-
-                            } else {
-
-                                System.out.println(Fibonacci.GenerarFibonacci(i) + "   ");
-
-                            }
-
-                        }
+                        System.out.println("******************* GENERAR FIBONACCI ************************");
+                        System.out.println("Este programa genera la serie Fibonacci tanto para numeros positivos como negativos");
+                        System.out.println("Ingrese la posicion fibonacci que desea ver:");
+                        int posicionFibo = sc.nextInt();
+                        fibo.mostrarFibo(posicionFibo);
+                        //limpiar scanner
+                        sc.nextLine();
 
                         break;
 
